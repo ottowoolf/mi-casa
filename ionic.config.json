@@ -1,0 +1,7 @@
+{
+  "name": "mi-casa",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
