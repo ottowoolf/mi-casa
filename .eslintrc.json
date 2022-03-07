@@ -14,12 +14,14 @@
         "plugin:@angular-eslint/template/process-inline-templates"
       ],
       "rules": {
+        "max-len": ["error", { "code": 150 }],
         "@angular-eslint/component-class-suffix": [
           "error",
           {
             "suffixes": ["Page", "Component"]
           }
         ],
+
         "@angular-eslint/component-selector": [
           "error",
           {
