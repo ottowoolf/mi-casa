@@ -34,14 +34,12 @@ export class PlaceDetailPage implements OnInit {
     });
   }
   onBookPlace() {
-    // this.router.navigateByUrl('/places/tabs/discover');
-    // this.navCtrl.navigateBack('/places/tabs/discover');
     this.actionSheet
       .create({
         header: 'Choose an action...',
         buttons: [
           {
-            text: 'Place Booking',
+            text: 'Book Random Date',
             handler: () => {
               this.openBookingModal('book');
             },
@@ -67,7 +65,7 @@ export class PlaceDetailPage implements OnInit {
     this.modalCtrl
       .create({
         component: CreateBookingComponent,
-        componentProps: { selectedPlace: this.place },
+        componentProps: { selectedPlace: this.place, selectedMode: mode },
       })
       .then((modalEl) => {
         modalEl.present();
